@@ -7,7 +7,7 @@
   },
   "servers": [
     {
-	  "url": "https://**baseurl**/v1",
+      "url": "https://**baseurl**/v1",
       "description": "api url details shared upon api access approval"
     }
   ],
@@ -983,8 +983,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/Animal",
-                "description": "Animal"
+                "$ref": "#/components/schemas/Animal"
               }
             }
           }
@@ -3008,7 +3007,6 @@
             "type": "string"
           }
         },
-        "readOnly": true,
         "required": [
           "type",
           "description"
@@ -3039,8 +3037,7 @@
                 "type": {
                   "type": "string",
                   "description": "This refers to the type of site identifier, such as holdingNumber, fsaNumber, etc.",
-                  "example": "holdingNumber",
-                  "readOnly": true
+                  "example": "holdingNumber"
                 }
               },
               "required": [
@@ -3054,9 +3051,6 @@
             "allOf": [
               {
                 "type": "string"
-              },
-              {
-                "readOnly": true
               }
             ]
           }
@@ -3139,12 +3133,10 @@
         "type": "object",
         "properties": {
           "type": {
-            "type": "string",
-            "readOnly": true
+            "type": "string"
           },
           "description": {
-            "type": "string",
-            "readOnly": true
+            "type": "string"
           },
           "activity": {
             "type": "object",
@@ -3186,8 +3178,7 @@
                 "type": {
                   "type": "string",
                   "description": "This refers to the type of site identifier, such as holdingNumber, fsaNumber, etc.",
-                  "example": "holdingNumber",
-                  "readOnly": true
+                  "example": "holdingNumber"
                 }
               },
               "required": [
@@ -3201,9 +3192,6 @@
             "allOf": [
               {
                 "type": "string"
-              },
-              {
-                "readOnly": true
               }
             ]
           }
@@ -3242,16 +3230,12 @@
           },
           "number": {
             "type": "integer",
-            "example": 55663427,
-            "readOnly": true
+            "example": 55663427
           },
           "receivedDate": {
             "allOf": [
               {
                 "$ref": "#/components/schemas/date"
-              },
-              {
-                "readOnly": true
               }
             ]
           },
@@ -3262,7 +3246,6 @@
                 "items": {
                   "type": "integer"
                 },
-                "readOnly": true,
                 "example": [
                   55663450,
                   55663451,
@@ -3285,8 +3268,7 @@
               },
               "number": {
                 "type": "integer",
-                "example": 55663427,
-                "readOnly": true
+                "example": 55663427
               }
             },
             "additionalProperties": false
@@ -3336,7 +3318,6 @@
             "items": {
               "type": "integer"
             },
-            "readOnly": true,
             "example": [
               55663427,
               55663428
@@ -3344,7 +3325,6 @@
           },
           "movementKind": {
             "type": "string",
-            "readOnly": true,
             "enum": [
               "regular",
               "circular",
@@ -3356,9 +3336,6 @@
             "allOf": [
               {
                 "$ref": "#/components/schemas/movementState"
-              },
-              {
-                "readOnly": true
               }
             ]
           },
@@ -3366,9 +3343,6 @@
             "allOf": [
               {
                 "$ref": "#/components/schemas/movementReviewState"
-              },
-              {
-                "readOnly": true
               }
             ]
           },
@@ -3404,7 +3378,11 @@
                       "example": "Possible TB Hazard"
                     },
                     "rejectionReasonId": {
-                      "$ref": "#/components/schemas/uuid",
+                      "allOf": [
+                        {
+                          "$ref": "#/components/schemas/uuid"
+                        }
+                      ],
                       "example": "3fa85f64-5717-4562-b3fc-2c963f66afa6"
                     },
                     "rejectionReason": {
@@ -3424,9 +3402,6 @@
                   ],
                   "additionalProperties": false
                 }
-              },
-              {
-                "readOnly": true
               }
             ]
           },
@@ -3458,9 +3433,6 @@
                     }
                   }
                 }
-              },
-              {
-                "readOnly": true
               }
             ]
           },
@@ -3560,9 +3532,6 @@
                   "allOf": [
                     {
                       "$ref": "#/components/schemas/uuid"
-                    },
-                    {
-                      "readOnly": true
                     }
                   ]
                 }
@@ -3573,9 +3542,6 @@
             "allOf": [
               {
                 "$ref": "#/components/schemas/datetime"
-              },
-              {
-                "readOnly": true
               }
             ]
           },
@@ -3583,9 +3549,6 @@
             "allOf": [
               {
                 "$ref": "#/components/schemas/datetime"
-              },
-              {
-                "readOnly": true
               }
             ]
           },
@@ -3611,9 +3574,6 @@
                   ]
                 },
                 "minItems": 1
-              },
-              {
-                "readOnly": true
               }
             ]
           }
@@ -3648,7 +3608,6 @@
         "properties": {
           "movementNumber": {
             "type": "number",
-            "readOnly": true,
             "example": 55663427
           },
           "links": {
@@ -3657,7 +3616,6 @@
               "self": {
                 "type": "string",
                 "format": "uri",
-                "readOnly": true,
                 "example": "/movements/55663427"
               }
             }
@@ -3717,7 +3675,6 @@
             "properties": {
               "movementNumber": {
                 "type": "number",
-                "readOnly": true,
                 "example": 55663427
               },
               "warning": {
@@ -3733,7 +3690,6 @@
                   "self": {
                     "type": "string",
                     "format": "uri",
-                    "readOnly": true,
                     "example": "/movements/55663427"
                   }
                 }
@@ -3852,7 +3808,6 @@
             "properties": {
               "number": {
                 "type": "number",
-                "readOnly": true,
                 "example": 55663427
               },
               "action": {
@@ -3870,7 +3825,6 @@
               "rejectionReason": {
                 "type": "string",
                 "example": "Other",
-                "readOnly": true,
                 "nullable": true
               },
               "otherReason": {
@@ -3882,9 +3836,6 @@
                 "allOf": [
                   {
                     "$ref": "#/components/schemas/datetime"
-                  },
-                  {
-                    "readOnly": true
                   }
                 ]
               }
@@ -4035,16 +3986,14 @@
         "properties": {
           "name": {
             "type": "string",
-            "example": "Dexter Cross",
-            "readOnly": true
+            "example": "Dexter Cross"
           },
           "code": {
             "type": "string",
             "example": "DEX"
           },
           "crossBreed": {
-            "type": "boolean",
-            "readOnly": true
+            "type": "boolean"
           }
         }
       },
@@ -4065,9 +4014,6 @@
                 "allOf": [
                   {
                     "$ref": "#/components/schemas/animalState"
-                  },
-                  {
-                    "readOnly": true
                   }
                 ]
               }
@@ -4100,15 +4046,9 @@
           },
           {
             "properties": {
-              "species": {
-                "readOnly": true
-              },
-              "name": {
-                "readOnly": true
-              },
-              "sex": {
-                "readOnly": true
-              }
+              "species": {},
+              "name": {},
+              "sex": {}
             }
           }
         ]
@@ -4166,8 +4106,7 @@
               },
               "name": {
                 "type": "string",
-                "example": "Abattoir Kill",
-                "readOnly": true
+                "example": "Abattoir Kill"
               }
             },
             "required": [
@@ -4178,9 +4117,6 @@
             "allOf": [
               {
                 "$ref": "#/components/schemas/date"
-              },
-              {
-                "readOnly": true
               }
             ]
           },
@@ -4205,7 +4141,6 @@
           "properties": {
             "identifier": {
               "type": "string",
-              "readOnly": true,
               "example": "UK654321123456"
             },
             "date": {
@@ -4234,7 +4169,6 @@
           },
           "assuranceHistory": {
             "type": "array",
-            "readOnly": true,
             "items": {
               "type": "object",
               "properties": {
@@ -4282,6 +4216,7 @@
       },
       "Animal": {
         "type": "object",
+        "description": "Animal",
         "properties": {
           "animal": {
             "allOf": [
@@ -4308,9 +4243,6 @@
                     "allOf": [
                       {
                         "$ref": "#/components/schemas/animalState"
-                      },
-                      {
-                        "readOnly": true
                       }
                     ]
                   }
@@ -4329,9 +4261,6 @@
             "allOf": [
               {
                 "$ref": "#/components/schemas/site"
-              },
-              {
-                "readOnly": true
               }
             ]
           },
@@ -4345,8 +4274,12 @@
                 "$ref": "#/components/schemas/ParentAnimal"
               },
               "birthDam": {
-                "description": "The animal giving birth to the animal in question. If the animal is a surrogate mother, there will be a genetic dam.",
-                "$ref": "#/components/schemas/ParentAnimal"
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/ParentAnimal"
+                  }
+                ],
+                "description": "The animal giving birth to the animal in question. If the animal is a surrogate mother, there will be a genetic dam."
               }
             }
           },
@@ -4354,19 +4287,31 @@
             "$ref": "#/components/schemas/animalBirth"
           },
           "death": {
-            "$ref": "#/components/schemas/animalDeath",
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/animalDeath"
+              }
+            ],
             "nullable": true
           },
           "registration": {
             "type": "object",
             "properties": {
               "birthDam": {
-                "description": "The animal giving birth to the animal in question. If the animal is a surrogate mother, there will be a genetic dam.",
-                "$ref": "#/components/schemas/ParentAnimal"
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/ParentAnimal"
+                  }
+                ],
+                "description": "The animal giving birth to the animal in question. If the animal is a surrogate mother, there will be a genetic dam."
               },
               "geneticDam": {
-                "description": "The genetic dam if different from the birth dam.",
-                "$ref": "#/components/schemas/ParentAnimal"
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/ParentAnimal"
+                  }
+                ],
+                "description": "The genetic dam if different from the birth dam."
               },
               "sire": {
                 "$ref": "#/components/schemas/ParentAnimal"
@@ -4398,9 +4343,6 @@
             "allOf": [
               {
                 "$ref": "#/components/schemas/site"
-              },
-              {
-                "readOnly": true
               }
             ]
           },
@@ -4410,16 +4352,12 @@
                 "$ref": "#/components/schemas/AnimalBirthingHistory"
               }
             ],
-            "nullable": true,
-            "readOnly": true
+            "nullable": true
           },
           "createdDateTime": {
             "allOf": [
               {
                 "$ref": "#/components/schemas/datetime"
-              },
-              {
-                "readOnly": true
               }
             ]
           },
@@ -4427,9 +4365,6 @@
             "allOf": [
               {
                 "$ref": "#/components/schemas/datetime"
-              },
-              {
-                "readOnly": true
               }
             ]
           },
@@ -4439,8 +4374,7 @@
                 "$ref": "#/components/schemas/Assurance"
               }
             ],
-            "nullable": true,
-            "readOnly": true
+            "nullable": true
           }
         },
         "required": [
@@ -4454,7 +4388,6 @@
           "identifier": {
             "type": "string",
             "format": "string",
-            "readOnly": true,
             "example": "UK543017404195"
           },
           "links": {
@@ -4463,7 +4396,6 @@
               "self": {
                 "type": "string",
                 "format": "uri",
-                "readOnly": true,
                 "example": "/animals/UK543017404195"
               }
             }
@@ -4477,9 +4409,6 @@
             "allOf": [
               {
                 "$ref": "#/components/schemas/uuid"
-              },
-              {
-                "readOnly": true
               }
             ]
           },
@@ -4493,9 +4422,6 @@
             "allOf": [
               {
                 "$ref": "#/components/schemas/site"
-              },
-              {
-                "readOnly": true
               }
             ]
           },
@@ -4514,9 +4440,6 @@
             "allOf": [
               {
                 "$ref": "#/components/schemas/datetime"
-              },
-              {
-                "readOnly": true
               }
             ]
           },
@@ -4554,7 +4477,6 @@
               "self": {
                 "type": "string",
                 "format": "uri",
-                "readOnly": true,
                 "example": "/lostfounds/84ebdc54-27cf-4a12-a0aa-359041de4f9d"
               }
             }
@@ -4623,8 +4545,7 @@
         "properties": {
           "status": {
             "type": "string",
-            "example": "Success",
-            "readOnly": true
+            "example": "Success"
           }
         },
         "oneOf": [
