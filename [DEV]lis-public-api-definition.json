@@ -7,7 +7,7 @@
   },
   "servers": [
     {
-	  "url": "https://**baseurl**/v1",
+      "url": "https://**baseurl**/v1",
       "description": "api url details shared upon api access approval"
     }
   ],
@@ -3007,7 +3007,6 @@
             "type": "string"
           }
         },
-        "readOnly": true,
         "required": [
           "type",
           "description"
@@ -3038,8 +3037,7 @@
                 "type": {
                   "type": "string",
                   "description": "This refers to the type of site identifier, such as holdingNumber, fsaNumber, etc.",
-                  "example": "holdingNumber",
-                  "readOnly": true
+                  "example": "holdingNumber"
                 }
               },
               "required": [
@@ -3054,9 +3052,7 @@
               {
                 "type": "string"
               },
-              {
-                "readOnly": true
-              }
+              {}
             ]
           }
         },
@@ -3138,12 +3134,10 @@
         "type": "object",
         "properties": {
           "type": {
-            "type": "string",
-            "readOnly": true
+            "type": "string"
           },
           "description": {
-            "type": "string",
-            "readOnly": true
+            "type": "string"
           },
           "activity": {
             "type": "object",
@@ -3185,8 +3179,7 @@
                 "type": {
                   "type": "string",
                   "description": "This refers to the type of site identifier, such as holdingNumber, fsaNumber, etc.",
-                  "example": "holdingNumber",
-                  "readOnly": true
+                  "example": "holdingNumber"
                 }
               },
               "required": [
@@ -3201,9 +3194,7 @@
               {
                 "type": "string"
               },
-              {
-                "readOnly": true
-              }
+              {}
             ]
           }
         },
@@ -3241,17 +3232,14 @@
           },
           "number": {
             "type": "integer",
-            "example": 55663427,
-            "readOnly": true
+            "example": 55663427
           },
           "receivedDate": {
             "allOf": [
               {
                 "$ref": "#/components/schemas/date"
               },
-              {
-                "readOnly": true
-              }
+              {}
             ]
           },
           "potentialMatchMovementNumbers": {
@@ -3261,7 +3249,6 @@
                 "items": {
                   "type": "integer"
                 },
-                "readOnly": true,
                 "example": [
                   55663450,
                   55663451,
@@ -3284,8 +3271,7 @@
               },
               "number": {
                 "type": "integer",
-                "example": 55663427,
-                "readOnly": true
+                "example": 55663427
               }
             },
             "additionalProperties": false
@@ -3335,7 +3321,6 @@
             "items": {
               "type": "integer"
             },
-            "readOnly": true,
             "example": [
               55663427,
               55663428
@@ -3343,7 +3328,6 @@
           },
           "movementKind": {
             "type": "string",
-            "readOnly": true,
             "enum": [
               "regular",
               "circular",
@@ -3356,9 +3340,7 @@
               {
                 "$ref": "#/components/schemas/movementState"
               },
-              {
-                "readOnly": true
-              }
+              {}
             ]
           },
           "reviewState": {
@@ -3366,9 +3348,7 @@
               {
                 "$ref": "#/components/schemas/movementReviewState"
               },
-              {
-                "readOnly": true
-              }
+              {}
             ]
           },
           "confirmations": {
@@ -3428,9 +3408,7 @@
                   "additionalProperties": false
                 }
               },
-              {
-                "readOnly": true
-              }
+              {}
             ]
           },
           "movementReports": {
@@ -3462,9 +3440,7 @@
                   }
                 }
               },
-              {
-                "readOnly": true
-              }
+              {}
             ]
           },
           "haulier": {
@@ -3564,9 +3540,7 @@
                     {
                       "$ref": "#/components/schemas/uuid"
                     },
-                    {
-                      "readOnly": true
-                    }
+                    {}
                   ]
                 }
               }
@@ -3577,9 +3551,7 @@
               {
                 "$ref": "#/components/schemas/datetime"
               },
-              {
-                "readOnly": true
-              }
+              {}
             ]
           },
           "updatedDateTime": {
@@ -3587,9 +3559,7 @@
               {
                 "$ref": "#/components/schemas/datetime"
               },
-              {
-                "readOnly": true
-              }
+              {}
             ]
           },
           "messages": {
@@ -3615,9 +3585,7 @@
                 },
                 "minItems": 1
               },
-              {
-                "readOnly": true
-              }
+              {}
             ]
           }
         },
@@ -3651,7 +3619,6 @@
         "properties": {
           "movementNumber": {
             "type": "number",
-            "readOnly": true,
             "example": 55663427
           },
           "links": {
@@ -3660,7 +3627,6 @@
               "self": {
                 "type": "string",
                 "format": "uri",
-                "readOnly": true,
                 "example": "/movements/55663427"
               }
             }
@@ -3720,7 +3686,6 @@
             "properties": {
               "movementNumber": {
                 "type": "number",
-                "readOnly": true,
                 "example": 55663427
               },
               "warning": {
@@ -3736,7 +3701,6 @@
                   "self": {
                     "type": "string",
                     "format": "uri",
-                    "readOnly": true,
                     "example": "/movements/55663427"
                   }
                 }
@@ -3855,7 +3819,6 @@
             "properties": {
               "number": {
                 "type": "number",
-                "readOnly": true,
                 "example": 55663427
               },
               "action": {
@@ -3873,7 +3836,6 @@
               "rejectionReason": {
                 "type": "string",
                 "example": "Other",
-                "readOnly": true,
                 "nullable": true
               },
               "otherReason": {
@@ -3886,9 +3848,7 @@
                   {
                     "$ref": "#/components/schemas/datetime"
                   },
-                  {
-                    "readOnly": true
-                  }
+                  {}
                 ]
               }
             }
@@ -4038,16 +3998,14 @@
         "properties": {
           "name": {
             "type": "string",
-            "example": "Dexter Cross",
-            "readOnly": true
+            "example": "Dexter Cross"
           },
           "code": {
             "type": "string",
             "example": "DEX"
           },
           "crossBreed": {
-            "type": "boolean",
-            "readOnly": true
+            "type": "boolean"
           }
         }
       },
@@ -4069,9 +4027,7 @@
                   {
                     "$ref": "#/components/schemas/animalState"
                   },
-                  {
-                    "readOnly": true
-                  }
+                  {}
                 ]
               }
             },
@@ -4103,15 +4059,9 @@
           },
           {
             "properties": {
-              "species": {
-                "readOnly": true
-              },
-              "name": {
-                "readOnly": true
-              },
-              "sex": {
-                "readOnly": true
-              }
+              "species": {},
+              "name": {},
+              "sex": {}
             }
           }
         ]
@@ -4169,8 +4119,7 @@
               },
               "name": {
                 "type": "string",
-                "example": "Abattoir Kill",
-                "readOnly": true
+                "example": "Abattoir Kill"
               }
             },
             "required": [
@@ -4182,9 +4131,7 @@
               {
                 "$ref": "#/components/schemas/date"
               },
-              {
-                "readOnly": true
-              }
+              {}
             ]
           },
           "site": {
@@ -4208,7 +4155,6 @@
           "properties": {
             "identifier": {
               "type": "string",
-              "readOnly": true,
               "example": "UK654321123456"
             },
             "date": {
@@ -4237,7 +4183,6 @@
           },
           "assuranceHistory": {
             "type": "array",
-            "readOnly": true,
             "items": {
               "type": "object",
               "properties": {
@@ -4313,9 +4258,7 @@
                       {
                         "$ref": "#/components/schemas/animalState"
                       },
-                      {
-                        "readOnly": true
-                      }
+                      {}
                     ]
                   }
                 }
@@ -4334,9 +4277,7 @@
               {
                 "$ref": "#/components/schemas/site"
               },
-              {
-                "readOnly": true
-              }
+              {}
             ]
           },
           "importParents": {
@@ -4419,9 +4360,7 @@
               {
                 "$ref": "#/components/schemas/site"
               },
-              {
-                "readOnly": true
-              }
+              {}
             ]
           },
           "birthingHistory": {
@@ -4430,17 +4369,14 @@
                 "$ref": "#/components/schemas/AnimalBirthingHistory"
               }
             ],
-            "nullable": true,
-            "readOnly": true
+            "nullable": true
           },
           "createdDateTime": {
             "allOf": [
               {
                 "$ref": "#/components/schemas/datetime"
               },
-              {
-                "readOnly": true
-              }
+              {}
             ]
           },
           "updatedDateTime": {
@@ -4448,9 +4384,7 @@
               {
                 "$ref": "#/components/schemas/datetime"
               },
-              {
-                "readOnly": true
-              }
+              {}
             ]
           },
           "assurance": {
@@ -4459,8 +4393,7 @@
                 "$ref": "#/components/schemas/Assurance"
               }
             ],
-            "nullable": true,
-            "readOnly": true
+            "nullable": true
           }
         },
         "required": [
@@ -4474,7 +4407,6 @@
           "identifier": {
             "type": "string",
             "format": "string",
-            "readOnly": true,
             "example": "UK543017404195"
           },
           "links": {
@@ -4483,7 +4415,6 @@
               "self": {
                 "type": "string",
                 "format": "uri",
-                "readOnly": true,
                 "example": "/animals/UK543017404195"
               }
             }
@@ -4498,9 +4429,7 @@
               {
                 "$ref": "#/components/schemas/uuid"
               },
-              {
-                "readOnly": true
-              }
+              {}
             ]
           },
           "identifier": {
@@ -4514,9 +4443,7 @@
               {
                 "$ref": "#/components/schemas/site"
               },
-              {
-                "readOnly": true
-              }
+              {}
             ]
           },
           "status": {
@@ -4535,9 +4462,7 @@
               {
                 "$ref": "#/components/schemas/datetime"
               },
-              {
-                "readOnly": true
-              }
+              {}
             ]
           },
           "crimeReferenceNumber": {
@@ -4574,7 +4499,6 @@
               "self": {
                 "type": "string",
                 "format": "uri",
-                "readOnly": true,
                 "example": "/lostfounds/84ebdc54-27cf-4a12-a0aa-359041de4f9d"
               }
             }
@@ -4643,8 +4567,7 @@
         "properties": {
           "status": {
             "type": "string",
-            "example": "Success",
-            "readOnly": true
+            "example": "Success"
           }
         },
         "oneOf": [
