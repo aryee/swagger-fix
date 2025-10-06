@@ -983,7 +983,8 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/Animal"
+                "$ref": "#/components/schemas/Animal",
+                "description": "Animal"
               }
             }
           }
@@ -4281,7 +4282,6 @@
       },
       "Animal": {
         "type": "object",
-        "description": "Animal",
         "properties": {
           "animal": {
             "allOf": [
@@ -4345,12 +4345,8 @@
                 "$ref": "#/components/schemas/ParentAnimal"
               },
               "birthDam": {
-                "allOf": [
-                  {
-                    "$ref": "#/components/schemas/ParentAnimal"
-                  }
-                ],
-                "description": "The animal giving birth to the animal in question. If the animal is a surrogate mother, there will be a genetic dam."
+                "description": "The animal giving birth to the animal in question. If the animal is a surrogate mother, there will be a genetic dam.",
+                "$ref": "#/components/schemas/ParentAnimal"
               }
             }
           },
@@ -4365,20 +4361,12 @@
             "type": "object",
             "properties": {
               "birthDam": {
-                "allOf": [
-                  {
-                    "$ref": "#/components/schemas/ParentAnimal"
-                  }
-                ],
-                "description": "The animal giving birth to the animal in question. If the animal is a surrogate mother, there will be a genetic dam."
+                "description": "The animal giving birth to the animal in question. If the animal is a surrogate mother, there will be a genetic dam.",
+                "$ref": "#/components/schemas/ParentAnimal"
               },
               "geneticDam": {
-                "allOf": [
-                  {
-                    "$ref": "#/components/schemas/ParentAnimal"
-                  }
-                ],
-                "description": "The genetic dam if different from the birth dam."
+                "description": "The genetic dam if different from the birth dam.",
+                "$ref": "#/components/schemas/ParentAnimal"
               },
               "sire": {
                 "$ref": "#/components/schemas/ParentAnimal"
