@@ -3403,7 +3403,11 @@
                       "example": "Possible TB Hazard"
                     },
                     "rejectionReasonId": {
-                      "$ref": "#/components/schemas/uuid",
+                      "allOf": [
+                        {
+                          "$ref": "#/components/schemas/uuid"
+                        }
+                      ],
                       "example": "3fa85f64-5717-4562-b3fc-2c963f66afa6"
                     },
                     "rejectionReason": {
@@ -4358,7 +4362,11 @@
             "$ref": "#/components/schemas/animalBirth"
           },
           "death": {
-            "$ref": "#/components/schemas/animalDeath",
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/animalDeath"
+              }
+            ],
             "nullable": true
           },
           "registration": {
