@@ -3051,8 +3051,7 @@
             "allOf": [
               {
                 "type": "string"
-              },
-              {}
+              }
             ]
           }
         },
@@ -3193,8 +3192,7 @@
             "allOf": [
               {
                 "type": "string"
-              },
-              {}
+              }
             ]
           }
         },
@@ -3238,8 +3236,7 @@
             "allOf": [
               {
                 "$ref": "#/components/schemas/date"
-              },
-              {}
+              }
             ]
           },
           "potentialMatchMovementNumbers": {
@@ -3339,16 +3336,14 @@
             "allOf": [
               {
                 "$ref": "#/components/schemas/movementState"
-              },
-              {}
+              }
             ]
           },
           "reviewState": {
             "allOf": [
               {
                 "$ref": "#/components/schemas/movementReviewState"
-              },
-              {}
+              }
             ]
           },
           "confirmations": {
@@ -3407,8 +3402,7 @@
                   ],
                   "additionalProperties": false
                 }
-              },
-              {}
+              }
             ]
           },
           "movementReports": {
@@ -3439,8 +3433,7 @@
                     }
                   }
                 }
-              },
-              {}
+              }
             ]
           },
           "haulier": {
@@ -3539,8 +3532,7 @@
                   "allOf": [
                     {
                       "$ref": "#/components/schemas/uuid"
-                    },
-                    {}
+                    }
                   ]
                 }
               }
@@ -3550,16 +3542,14 @@
             "allOf": [
               {
                 "$ref": "#/components/schemas/datetime"
-              },
-              {}
+              }
             ]
           },
           "updatedDateTime": {
             "allOf": [
               {
                 "$ref": "#/components/schemas/datetime"
-              },
-              {}
+              }
             ]
           },
           "messages": {
@@ -3584,8 +3574,7 @@
                   ]
                 },
                 "minItems": 1
-              },
-              {}
+              }
             ]
           }
         },
@@ -3847,8 +3836,7 @@
                 "allOf": [
                   {
                     "$ref": "#/components/schemas/datetime"
-                  },
-                  {}
+                  }
                 ]
               }
             }
@@ -4026,8 +4014,7 @@
                 "allOf": [
                   {
                     "$ref": "#/components/schemas/animalState"
-                  },
-                  {}
+                  }
                 ]
               }
             },
@@ -4130,8 +4117,7 @@
             "allOf": [
               {
                 "$ref": "#/components/schemas/date"
-              },
-              {}
+              }
             ]
           },
           "site": {
@@ -4257,8 +4243,7 @@
                     "allOf": [
                       {
                         "$ref": "#/components/schemas/animalState"
-                      },
-                      {}
+                      }
                     ]
                   }
                 }
@@ -4276,8 +4261,7 @@
             "allOf": [
               {
                 "$ref": "#/components/schemas/site"
-              },
-              {}
+              }
             ]
           },
           "importParents": {
@@ -4359,8 +4343,7 @@
             "allOf": [
               {
                 "$ref": "#/components/schemas/site"
-              },
-              {}
+              }
             ]
           },
           "birthingHistory": {
@@ -4375,16 +4358,14 @@
             "allOf": [
               {
                 "$ref": "#/components/schemas/datetime"
-              },
-              {}
+              }
             ]
           },
           "updatedDateTime": {
             "allOf": [
               {
                 "$ref": "#/components/schemas/datetime"
-              },
-              {}
+              }
             ]
           },
           "assurance": {
@@ -4428,8 +4409,7 @@
             "allOf": [
               {
                 "$ref": "#/components/schemas/uuid"
-              },
-              {}
+              }
             ]
           },
           "identifier": {
@@ -4442,8 +4422,7 @@
             "allOf": [
               {
                 "$ref": "#/components/schemas/site"
-              },
-              {}
+              }
             ]
           },
           "status": {
@@ -4461,8 +4440,7 @@
             "allOf": [
               {
                 "$ref": "#/components/schemas/datetime"
-              },
-              {}
+              }
             ]
           },
           "crimeReferenceNumber": {
