@@ -4243,9 +4243,11 @@
                     "allOf": [
                       {
                         "$ref": "#/components/schemas/animalState"
+                      },
+                      {
+                        "readOnly": true
                       }
-                    ],
-                    "readOnly": true
+                    ]
                   }
                 }
               }
@@ -4262,9 +4264,11 @@
             "allOf": [
               {
                 "$ref": "#/components/schemas/site"
+              },
+              {
+                "readOnly": true
               }
-            ],
-            "readOnly": true
+            ]
           },
           "importParents": {
             "type": "object",
@@ -4345,43 +4349,53 @@
             "allOf": [
               {
                 "$ref": "#/components/schemas/site"
+              },
+              {
+                "readOnly": true
               }
-            ],
-            "readOnly": true
+            ]
           },
           "birthingHistory": {
             "allOf": [
               {
                 "$ref": "#/components/schemas/AnimalBirthingHistory"
+              },
+              {
+                "nullable": true,
+                "readOnly": true
               }
-            ],
-            "nullable": true,
-            "readOnly": true
+            ]
           },
           "createdDateTime": {
             "allOf": [
               {
                 "$ref": "#/components/schemas/datetime"
+              },
+              {
+                "readOnly": true
               }
-            ],
-            "readOnly": true
+            ]
           },
           "updatedDateTime": {
             "allOf": [
               {
                 "$ref": "#/components/schemas/datetime"
+              },
+              {
+                "readOnly": true
               }
-            ],
-            "readOnly": true
+            ]
           },
           "assurance": {
             "allOf": [
               {
                 "$ref": "#/components/schemas/Assurance"
+              },
+              {
+                "nullable": true,
+                "readOnly": true
               }
-            ],
-            "nullable": true,
-            "readOnly": true
+            ]
           }
         },
         "required": [
