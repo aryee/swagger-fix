@@ -4243,6 +4243,9 @@
                     "allOf": [
                       {
                         "$ref": "#/components/schemas/animalState"
+                      },
+                      {
+                        "readOnly": true
                       }
                     ]
                   }
@@ -4261,6 +4264,9 @@
             "allOf": [
               {
                 "$ref": "#/components/schemas/site"
+              },
+              {
+                "readOnly": true
               }
             ]
           },
@@ -4343,6 +4349,9 @@
             "allOf": [
               {
                 "$ref": "#/components/schemas/site"
+              },
+              {
+                "readOnly": true
               }
             ]
           },
@@ -4352,12 +4361,16 @@
                 "$ref": "#/components/schemas/AnimalBirthingHistory"
               }
             ],
-            "nullable": true
+            "nullable": true,
+            "readOnly": true
           },
           "createdDateTime": {
             "allOf": [
               {
                 "$ref": "#/components/schemas/datetime"
+              },
+              {
+                "readOnly": true
               }
             ]
           },
@@ -4365,6 +4378,9 @@
             "allOf": [
               {
                 "$ref": "#/components/schemas/datetime"
+              },
+              {
+                "readOnly": true
               }
             ]
           },
@@ -4374,7 +4390,8 @@
                 "$ref": "#/components/schemas/Assurance"
               }
             ],
-            "nullable": true
+            "nullable": true,
+            "readOnly": true
           }
         },
         "required": [
@@ -4388,6 +4405,7 @@
           "identifier": {
             "type": "string",
             "format": "string",
+            "readOnly": true,
             "example": "UK543017404195"
           },
           "links": {
@@ -4396,6 +4414,7 @@
               "self": {
                 "type": "string",
                 "format": "uri",
+                "readOnly": true,
                 "example": "/animals/UK543017404195"
               }
             }
