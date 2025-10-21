@@ -4240,14 +4240,8 @@
                     "$ref": "#/components/schemas/productionType"
                   },
                   "state": {
-                    "allOf": [
-                      {
-                        "$ref": "#/components/schemas/animalState"
-                      },
-                      {
-                        "readOnly": true
-                      }
-                    ]
+                    "$ref": "#/components/schemas/animalState",
+                    "readOnly": true
                   }
                 }
               }
@@ -4261,14 +4255,8 @@
             "$ref": "#/components/schemas/breed"
           },
           "currentSite": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/site"
-              },
-              {
-                "readOnly": true
-              }
-            ]
+            "$ref": "#/components/schemas/site",
+            "readOnly": true
           },
           "importParents": {
             "type": "object",
@@ -4346,50 +4334,24 @@
             ]
           },
           "homeSite": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/site"
-              },
-              {
-                "readOnly": true
-              }
-            ]
+            "$ref": "#/components/schemas/site",
+            "readOnly": true
           },
           "birthingHistory": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/AnimalBirthingHistory"
-              }
-            ],
+            "$ref": "#/components/schemas/AnimalBirthingHistory",
             "nullable": true,
             "readOnly": true
           },
           "createdDateTime": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/datetime"
-              },
-              {
-                "readOnly": true
-              }
-            ]
+            "$ref": "#/components/schemas/datetime",
+            "readOnly": true
           },
           "updatedDateTime": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/datetime"
-              },
-              {
-                "readOnly": true
-              }
-            ]
+            "$ref": "#/components/schemas/datetime",
+            "readOnly": true
           },
           "assurance": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/Assurance"
-              }
-            ],
+            "$ref": "#/components/schemas/Assurance",
             "nullable": true,
             "readOnly": true
           }
