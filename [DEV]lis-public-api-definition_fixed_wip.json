@@ -4248,248 +4248,62 @@
             ]
           },
           "breed": {
-            "type": "object",
-            "properties": {
-              "code": {
-                "type": "string",
-                "example": "DEX"
-              }
-            }
+            "$ref": "#/components/schemas/breed"
           },
           "importParents": {
             "type": "object",
             "properties": {
               "sire": {
-                "type": "object",
-                "properties": {
-                  "identifier": {
-                    "type": "string",
-                    "example": "UK12345678910"
-                  }
-                },
-                "required": [
-                  "identifier"
-                ]
+                "$ref": "#/components/schemas/ParentAnimal"
               },
               "geneticDam": {
-                "type": "object",
-                "properties": {
-                  "identifier": {
-                    "type": "string",
-                    "example": "UK12345678910"
-                  }
-                },
-                "required": [
-                  "identifier"
-                ]
+                "$ref": "#/components/schemas/ParentAnimal"
               },
               "birthDam": {
-                "type": "object",
-                "description": "The animal giving birth to the animal in question. If the animal is a surrogate mother, there will be a genetic dam.",
-                "properties": {
-                  "identifier": {
-                    "type": "string",
-                    "example": "UK12345678910"
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/ParentAnimal"
                   }
-                },
-                "required": [
-                  "identifier"
-                ]
+                ],
+                "description": "The animal giving birth to the animal in question. If the animal is a surrogate mother, there will be a genetic dam."
               }
             }
           },
           "birth": {
-            "type": "object",
-            "properties": {
-              "site": {
-                "type": "object",
-                "properties": {
-                  "identifiers": {
-                    "type": "array",
-                    "items": {
-                      "type": "object",
-                      "properties": {
-                        "identifier": {
-                          "type": "string",
-                          "example": "27/811/2976"
-                        }
-                      },
-                      "required": [
-                        "identifier"
-                      ]
-                    }
-                  }
-                },
-                "required": [
-                  "identifiers"
-                ]
-              },
-              "date": {
-                "$ref": "#/components/schemas/date"
-              },
-              "year": {
-                "type": "integer"
-              },
-              "mark": {
-                "type": "string",
-                "example": "556773"
-              },
-              "assistedBirthFlag": {
-                "type": "boolean"
-              },
-              "multipleBirthsFlag": {
-                "type": "boolean"
-              },
-              "embryoTransferFlag": {
-                "type": "boolean"
-              }
-            },
-            "required": [
-              "site",
-              "year",
-              "assistedBirthFlag",
-              "multipleBirthsFlag",
-              "embryoTransferFlag"
-            ]
+            "$ref": "#/components/schemas/animalBirth"
           },
           "death": {
-            "type": "object",
-            "nullable": true,
-            "properties": {
-              "carcassCollectionSite": {
-                "type": "object",
-                "properties": {
-                  "identifiers": {
-                    "type": "array",
-                    "items": {
-                      "type": "object",
-                      "properties": {
-                        "identifier": {
-                          "type": "string",
-                          "example": "27/811/2976"
-                        }
-                      },
-                      "required": [
-                        "identifier"
-                      ]
-                    }
-                  }
-                },
-                "required": [
-                  "identifiers"
-                ]
-              },
-              "date": {
-                "$ref": "#/components/schemas/date"
-              },
-              "reason": {
-                "type": "object",
-                "properties": {
-                  "id": {
-                    "$ref": "#/components/schemas/uuid"
-                  }
-                },
-                "required": [
-                  "id"
-                ]
-              },
-              "site": {
-                "type": "object",
-                "properties": {
-                  "identifiers": {
-                    "type": "array",
-                    "items": {
-                      "type": "object",
-                      "properties": {
-                        "identifier": {
-                          "type": "string",
-                          "example": "27/811/2976"
-                        }
-                      },
-                      "required": [
-                        "identifier"
-                      ]
-                    }
-                  }
-                },
-                "required": [
-                  "identifiers"
-                ]
-              },
-              "tseTestRequiredFlag": {
-                "type": "boolean"
-              },
-              "createdDateTime": {
-                "$ref": "#/components/schemas/datetime"
-              },
-              "updatedDateTime": {
-                "$ref": "#/components/schemas/datetime"
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/animalDeath"
               }
-            }
+            ],
+            "nullable": true
           },
           "registration": {
             "type": "object",
             "properties": {
               "birthDam": {
-                "type": "object",
-                "description": "The animal giving birth to the animal in question. If the animal is a surrogate mother, there will be a genetic dam.",
-                "properties": {
-                  "identifier": {
-                    "type": "string",
-                    "example": "UK12345678910"
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/ParentAnimal"
                   }
-                },
-                "required": [
-                  "identifier"
-                ]
+                ],
+                "description": "The animal giving birth to the animal in question. If the animal is a surrogate mother, there will be a genetic dam."
               },
               "geneticDam": {
-                "type": "object",
-                "description": "The genetic dam if different from the birth dam.",
-                "properties": {
-                  "identifier": {
-                    "type": "string",
-                    "example": "UK12345678910"
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/ParentAnimal"
                   }
-                },
-                "required": [
-                  "identifier"
-                ]
+                ],
+                "description": "The genetic dam if different from the birth dam."
               },
               "sire": {
-                "type": "object",
-                "properties": {
-                  "identifier": {
-                    "type": "string",
-                    "example": "UK12345678910"
-                  }
-                },
-                "required": [
-                  "identifier"
-                ]
+                "$ref": "#/components/schemas/ParentAnimal"
               },
               "site": {
-                "type": "object",
-                "properties": {
-                  "identifiers": {
-                    "type": "array",
-                    "items": {
-                      "type": "object",
-                      "properties": {
-                        "identifier": {
-                          "type": "string",
-                          "example": "27/811/2976"
-                        }
-                      },
-                      "required": [
-                        "identifier"
-                      ]
-                    }
-                  }
-                },
-                "required": [
-                  "identifiers"
-                ]
+                "$ref": "#/components/schemas/site"
               },
               "date": {
                 "$ref": "#/components/schemas/date"
