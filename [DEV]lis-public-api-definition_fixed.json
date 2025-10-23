@@ -4219,13 +4219,55 @@
         "description": "Animal creation/update request",
         "properties": {
           "animal": {
-            "$ref": "#/components/schemas/Animal/properties/animal"
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/animal"
+              },
+              {
+                "type": "object",
+                "properties": {
+                  "genotype": {
+                    "type": "string",
+                    "example": "QQQ/QRR",
+                    "nullable": true
+                  },
+                  "originalIdentifier": {
+                    "type": "string",
+                    "example": "USA005516557866",
+                    "nullable": true
+                  },
+                  "productionType": {
+                    "$ref": "#/components/schemas/productionType"
+                  }
+                }
+              }
+            ],
+            "required": [
+              "species",
+              "sex"
+            ]
           },
           "breed": {
             "$ref": "#/components/schemas/breed"
           },
           "importParents": {
-            "$ref": "#/components/schemas/Animal/properties/importParents"
+            "type": "object",
+            "properties": {
+              "sire": {
+                "$ref": "#/components/schemas/ParentAnimal"
+              },
+              "geneticDam": {
+                "$ref": "#/components/schemas/ParentAnimal"
+              },
+              "birthDam": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/ParentAnimal"
+                  }
+                ],
+                "description": "The animal giving birth to the animal in question. If the animal is a surrogate mother, there will be a genetic dam."
+              }
+            }
           },
           "birth": {
             "$ref": "#/components/schemas/animalBirth"
@@ -4239,7 +4281,49 @@
             "nullable": true
           },
           "registration": {
-            "$ref": "#/components/schemas/Animal/properties/registration"
+            "type": "object",
+            "properties": {
+              "birthDam": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/ParentAnimal"
+                  }
+                ],
+                "description": "The animal giving birth to the animal in question. If the animal is a surrogate mother, there will be a genetic dam."
+              },
+              "geneticDam": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/ParentAnimal"
+                  }
+                ],
+                "description": "The genetic dam if different from the birth dam."
+              },
+              "sire": {
+                "$ref": "#/components/schemas/ParentAnimal"
+              },
+              "site": {
+                "$ref": "#/components/schemas/site"
+              },
+              "date": {
+                "$ref": "#/components/schemas/date"
+              },
+              "category": {
+                "type": "string",
+                "enum": [
+                  "birthRegistration",
+                  "registration"
+                ]
+              },
+              "identificationDate": {
+                "$ref": "#/components/schemas/date"
+              }
+            },
+            "required": [
+              "site",
+              "date",
+              "category"
+            ]
           }
         },
         "required": [
