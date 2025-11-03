@@ -1812,13 +1812,11 @@
           },
           "Address1": {
             "type": "string",
-            "nullable": true,
-            "readOnly": true
+            "nullable": true
           },
           "Full_Address": {
             "type": "string",
-            "nullable": true,
-            "readOnly": true
+            "nullable": true
           }
         },
         "additionalProperties": false
@@ -1911,8 +1909,7 @@
           },
           "Document": {
             "type": "string",
-            "nullable": true,
-            "readOnly": true
+            "nullable": true
           },
           "AmendmentDeclaration_Json": {
             "type": "string",
@@ -2544,8 +2541,7 @@
             "nullable": true
           },
           "Document": {
-            "type": "string",
-            "readOnly": true
+            "type": "string"
           },
           "Tag_1": {
             "allOf": [
@@ -2611,8 +2607,7 @@
             "nullable": true
           },
           "Document": {
-            "type": "string",
-            "readOnly": true
+            "type": "string"
           },
           "Tag_1": {
             "allOf": [
@@ -2684,8 +2679,7 @@
             "format": "int32"
           },
           "Document": {
-            "type": "string",
-            "readOnly": true
+            "type": "string"
           }
         },
         "additionalProperties": false
@@ -2829,8 +2823,7 @@
             "nullable": true
           },
           "Document": {
-            "type": "string",
-            "readOnly": true
+            "type": "string"
           },
           "Country": {
             "type": "string"
@@ -3297,8 +3290,7 @@
           },
           "Search_Value": {
             "type": "string",
-            "nullable": true,
-            "readOnly": true
+            "nullable": true
           }
         },
         "additionalProperties": false
